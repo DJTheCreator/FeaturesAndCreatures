@@ -11,6 +11,12 @@
   "block.featuresandcreatures.dream_planks": "Dream Planks",
   "block.featuresandcreatures.dream_grass_block": "Dream Grass Block",
 
+  "block.featuresandcreatures.blood_log": "Blood Log",
+  "block.featuresandcreatures.blood_planks": "Blood Planks",
+  "block.featuresandcreatures.blood_leaves": "Blood Leaves",
+  "block.featuresandcreatures.blood_sapling": "Blood Sapling",
+
+
   "itemGroup.facm": "Features and Creatures"
 
 }

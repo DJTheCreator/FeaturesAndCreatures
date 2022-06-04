@@ -1,15 +1,20 @@
 package com.hammergames.featuresandcreatures.block;
 
 import com.hammergames.featuresandcreatures.FeaturesAndCreatures;
+import com.hammergames.featuresandcreatures.block.custom.ModUnflammableRotatedPillarBlock;
 import com.hammergames.featuresandcreatures.item.ModCreativeModeTab;
 import com.hammergames.featuresandcreatures.item.ModItems;
+import com.hammergames.featuresandcreatures.world.feature.tree.BloodTreeGrower;
 import net.minecraft.client.resources.sounds.Sound;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -29,6 +34,18 @@ public class ModBlocks {
     public static final RegistryObject<Block> DREAM_GRASS_BLOCK = registerBlock("dream_grass_block", () ->
             new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5f).sound(SoundType.STONE)), ModCreativeModeTab.FEATURESANDCREATURES);
 
+    public static final RegistryObject<Block> BLOOD_LOG = registerBlock("blood_log", () ->
+            new ModUnflammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)), ModCreativeModeTab.FEATURESANDCREATURES);
+    public static final RegistryObject<Block> BLOOD_PLANKS = registerBlock("blood_planks", () ->
+            new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)){
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {return false;}}, ModCreativeModeTab.FEATURESANDCREATURES);
+    public static final RegistryObject<Block> BLOOD_LEAVES = registerBlock("blood_leaves", () ->
+            new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {return false;}}, ModCreativeModeTab.FEATURESANDCREATURES);
+    public static final RegistryObject<Block> BLOOD_SAPLING = registerBlock("blood_sapling", () ->
+            new SaplingBlock(new BloodTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), ModCreativeModeTab.FEATURESANDCREATURES);
 
 
     //These methods create an item for the blocks automatically

@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "featuresandcreatures:block/blood_sapling"
+  }
+}

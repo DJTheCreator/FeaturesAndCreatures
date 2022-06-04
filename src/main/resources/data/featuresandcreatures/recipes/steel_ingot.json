@@ -4,14 +4,9 @@
     {
       "item": "minecraft:iron_ingot"
     },
-    [
-      {
-        "item": "minecraft:coal"
-      },
-      {
-        "item": "minecraft:charcoal"
-      }
-    ]
+    {
+      "item": "minecraft:coal"
+    }
   ],
   "result": {
     "item": "featuresandcreatures:steel_ingot"

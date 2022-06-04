@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "featuresandcreatures:block/blood_log_top",
+    "side": "featuresandcreatures:block/blood_log"
+  }
+}
