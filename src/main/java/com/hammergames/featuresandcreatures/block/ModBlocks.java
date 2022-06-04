@@ -34,13 +34,15 @@ public class ModBlocks {
             new Block(BlockBehaviour.Properties.of(Material.WOOD).strength(2f).sound(SoundType.WOOD)), ModCreativeModeTab.FEATURESANDCREATURES);
     public static final RegistryObject<Block> DREAM_GRASS_BLOCK = registerBlock("dream_grass_block", () ->
             new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5f).sound(SoundType.STONE)), ModCreativeModeTab.FEATURESANDCREATURES);
+    public static final RegistryObject<Block> DREAM_ROCK = registerBlock("dream_rock", () ->
+            new Block(BlockBehaviour.Properties.of(Material.STONE).strength(2f).sound(SoundType.STONE)), ModCreativeModeTab.FEATURESANDCREATURES);
     public static final RegistryObject<Block> DREAM_DOOR = registerBlock("dream_door", () ->
             new DoorBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.0f).sound(SoundType.WOOD)), ModCreativeModeTab.FEATURESANDCREATURES);
 
 
     public static final RegistryObject<Block> BLOOD_LOG = registerBlock("blood_log", () ->
             new ModUnflammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)), ModCreativeModeTab.FEATURESANDCREATURES);
-    public static final RegistryObject<Block> BLOOD_PLANKS = registerBlock("blood_planks", () ->
+    public static final RegistryObject<Block> FLESH_BLOCK = registerBlock("flesh_block", () ->
             new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)){
                 @Override
                 public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {return false;}}, ModCreativeModeTab.FEATURESANDCREATURES);
