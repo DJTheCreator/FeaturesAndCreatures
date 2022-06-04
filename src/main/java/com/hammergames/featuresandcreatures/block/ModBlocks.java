@@ -1,6 +1,7 @@
 package com.hammergames.featuresandcreatures.block;
 
 import com.hammergames.featuresandcreatures.FeaturesAndCreatures;
+import com.hammergames.featuresandcreatures.block.custom.ModNetherrackSaplingBlock;
 import com.hammergames.featuresandcreatures.block.custom.ModUnflammableRotatedPillarBlock;
 import com.hammergames.featuresandcreatures.item.ModCreativeModeTab;
 import com.hammergames.featuresandcreatures.item.ModItems;
@@ -57,7 +58,7 @@ public class ModBlocks {
                 @Override
                 public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {return false;}}, ModCreativeModeTab.FEATURESANDCREATURES);
     public static final RegistryObject<Block> BLOOD_SAPLING = registerBlock("blood_sapling", () ->
-            new SaplingBlock(new BloodTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), ModCreativeModeTab.FEATURESANDCREATURES);
+            new ModNetherrackSaplingBlock(new BloodTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), ModCreativeModeTab.FEATURESANDCREATURES);
 
 
 

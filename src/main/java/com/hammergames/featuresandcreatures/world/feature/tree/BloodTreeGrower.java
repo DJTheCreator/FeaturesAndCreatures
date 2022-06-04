@@ -1,7 +1,11 @@
 package com.hammergames.featuresandcreatures.world.feature.tree;
 
 import com.hammergames.featuresandcreatures.world.feature.ModConfiguredFeature;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.grower.AbstractTreeGrower;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import org.jetbrains.annotations.Nullable;
 
