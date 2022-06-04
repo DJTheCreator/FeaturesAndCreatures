@@ -41,7 +41,13 @@ public class ModBlocks {
 
 
     public static final RegistryObject<Block> BLOOD_LOG = registerBlock("blood_log", () ->
-            new ModUnflammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)), ModCreativeModeTab.FEATURESANDCREATURES);
+            new ModUnflammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)){
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {return false;}}, ModCreativeModeTab.FEATURESANDCREATURES);
+    public static final RegistryObject<Block> STRIPPED_BLOOD_LOG = registerBlock("stripped_blood_log", () ->
+            new ModUnflammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)){
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {return false;}}, ModCreativeModeTab.FEATURESANDCREATURES);
     public static final RegistryObject<Block> FLESH_BLOCK = registerBlock("flesh_block", () ->
             new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)){
                 @Override

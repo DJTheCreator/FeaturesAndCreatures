@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "featuresandcreatures:bloodfruit"
+  },
+  "result": "featuresandcreatures:roasted_bloodfruit",
+  "experience": 0.35,
+  "cookingtime": 150
+}

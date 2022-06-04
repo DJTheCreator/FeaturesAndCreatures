@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "featuresandcreatures:stripped_blood_log"
+    }
+  ],
+  "result": {
+    "item": "featuresandcreatures:flesh_block"
+  }
+}

@@ -7,6 +7,7 @@
   "item.featuresandcreatures.steel_ingot": "Steel Ingot",
 
   "item.featuresandcreatures.bloodfruit": "Bloodfruit",
+  "item.featuresandcreatures.roasted_bloodfruit": "Roasted Bloodfruit",
 
   "item.featuresandcreatures.ruby_sword": "Ruby Sword",
   "item.featuresandcreatures.ruby_pickaxe": "Ruby Pickaxe",
@@ -22,6 +23,7 @@
   "block.featuresandcreatures.dream_door": "Dream Door",
 
   "block.featuresandcreatures.blood_log": "Blood Log",
+  "block.featuresandcreatures.stripped_blood_log": "Stripped Blood Log",
   "block.featuresandcreatures.flesh_block": "Flesh",
   "block.featuresandcreatures.blood_leaves": "Blood Leaves",
   "block.featuresandcreatures.blood_sapling": "Blood Sapling",

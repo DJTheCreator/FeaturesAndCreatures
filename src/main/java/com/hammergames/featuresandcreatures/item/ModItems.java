@@ -28,10 +28,8 @@ public class ModItems {
     //Food
     public static final RegistryObject<Item> BLOODFRUIT = ITEMS.register("bloodfruit", () ->
             new Item(new Item.Properties().tab(ModCreativeModeTab.FEATURESANDCREATURES).food(ModFoods.BLOODFRUIT)));
-
-    public static void register(IEventBus eventBus) {
-        ITEMS.register(eventBus);
-    }
+    public static final RegistryObject<Item> ROASTED_BLOODFRUIT = ITEMS.register("roasted_bloodfruit", () ->
+            new Item(new Item.Properties().tab(ModCreativeModeTab.FEATURESANDCREATURES).food(ModFoods.ROASTED_BLOODFRUIT)));
 
     //Tools
     public static final RegistryObject<Item> RUBY_SWORD = ITEMS.register("ruby_sword", () ->
@@ -46,5 +44,9 @@ public class ModItems {
             new HoeItem(ModTiers.RUBY, -5, 0.0f, new Item.Properties().tab(ModCreativeModeTab.FEATURESANDCREATURES)));
 
 
+
+    public static void register(IEventBus eventBus) {
+        ITEMS.register(eventBus);
+    }
 
 }

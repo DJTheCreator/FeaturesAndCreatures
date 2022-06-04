@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "featuresandcreatures:block/stripped_blood_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "featuresandcreatures:block/stripped_blood_log"
+    },
+    "axis=z": {
+      "model": "featuresandcreatures:block/stripped_blood_log_horizontal",
+      "x": 90
+    }
+  }
+}
