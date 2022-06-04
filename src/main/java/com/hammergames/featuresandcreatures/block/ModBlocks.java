@@ -31,7 +31,7 @@ public class ModBlocks {
 
 
 
-    //Helper methods
+    //These methods create an item for the blocks automatically
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab)
     {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
