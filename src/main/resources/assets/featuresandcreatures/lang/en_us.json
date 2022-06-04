@@ -1,0 +1,16 @@
+{
+  "item.featuresandcreatures.ruby": "Ruby",
+  "item.featuresandcreatures.amethyst": "Amethyst",
+  "item.featuresandcreatures.sapphire": "Sapphire",
+  "item.featuresandcreatures.topaz": "Topaz",
+
+  "item.featuresandcreatures.steel_ingot": "Steel Ingot",
+
+  "block.featuresandcreatures.ruby_ore": "Ruby Ore",
+
+  "block.featuresandcreatures.dream_planks": "Dream Planks",
+  "block.featuresandcreatures.dream_grass_block": "Dream Grass Block",
+
+  "itemGroup.facm": "Features and Creatures"
+
+}
