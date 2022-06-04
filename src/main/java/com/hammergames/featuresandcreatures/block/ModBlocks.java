@@ -29,10 +29,14 @@ public class ModBlocks {
     public static final RegistryObject<Block> RUBY_ORE = registerBlock("ruby_ore", () ->
             new Block(BlockBehaviour.Properties.of(Material.STONE).strength(3f).requiresCorrectToolForDrops().sound(SoundType.STONE)), ModCreativeModeTab.FEATURESANDCREATURES);
 
+
     public static final RegistryObject<Block> DREAM_PLANKS = registerBlock("dream_planks", () ->
             new Block(BlockBehaviour.Properties.of(Material.WOOD).strength(2f).sound(SoundType.WOOD)), ModCreativeModeTab.FEATURESANDCREATURES);
     public static final RegistryObject<Block> DREAM_GRASS_BLOCK = registerBlock("dream_grass_block", () ->
             new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5f).sound(SoundType.STONE)), ModCreativeModeTab.FEATURESANDCREATURES);
+    public static final RegistryObject<Block> DREAM_DOOR = registerBlock("dream_door", () ->
+            new DoorBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.0f).sound(SoundType.WOOD)), ModCreativeModeTab.FEATURESANDCREATURES);
+
 
     public static final RegistryObject<Block> BLOOD_LOG = registerBlock("blood_log", () ->
             new ModUnflammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)), ModCreativeModeTab.FEATURESANDCREATURES);
@@ -46,6 +50,10 @@ public class ModBlocks {
                 public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {return false;}}, ModCreativeModeTab.FEATURESANDCREATURES);
     public static final RegistryObject<Block> BLOOD_SAPLING = registerBlock("blood_sapling", () ->
             new SaplingBlock(new BloodTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), ModCreativeModeTab.FEATURESANDCREATURES);
+
+
+
+
 
 
     //These methods create an item for the blocks automatically

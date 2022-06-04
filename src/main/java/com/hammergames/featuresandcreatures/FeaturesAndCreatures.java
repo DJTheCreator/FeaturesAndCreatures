@@ -39,12 +39,15 @@ public class FeaturesAndCreatures
         ModBlocks.register((eventBus));
 
         eventBus.addListener(this::setup);
+        eventBus.addListener((this::clientSetup));
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
 
     private void clientSetup(final FMLClientSetupEvent event) {
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DREAM_DOOR.get(), RenderType.cutout());
+
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLOOD_LEAVES.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLOOD_SAPLING.get(), RenderType.cutout());
     }

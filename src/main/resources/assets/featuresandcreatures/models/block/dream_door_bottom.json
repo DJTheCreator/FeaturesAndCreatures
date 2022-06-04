@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom",
+  "textures": {
+    "top": "featuresandcreatures:block/dream_door_top",
+    "bottom": "featuresandcreatures:block/dream_door_bottom"
+  }
+}
