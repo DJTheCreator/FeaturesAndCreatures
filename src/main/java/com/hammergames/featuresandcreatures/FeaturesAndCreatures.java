@@ -2,6 +2,7 @@ package com.hammergames.featuresandcreatures;
 
 import com.hammergames.featuresandcreatures.block.ModBlocks;
 import com.hammergames.featuresandcreatures.item.ModItems;
+import com.hammergames.featuresandcreatures.util.ModTags;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Block;
@@ -37,6 +38,8 @@ public class FeaturesAndCreatures
 
         ModItems.register(eventBus);
         ModBlocks.register((eventBus));
+
+        ModTags.register();
 
         eventBus.addListener(this::setup);
         eventBus.addListener((this::clientSetup));
