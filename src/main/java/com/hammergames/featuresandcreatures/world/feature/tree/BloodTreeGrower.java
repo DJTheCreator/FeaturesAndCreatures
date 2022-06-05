@@ -2,6 +2,7 @@ package com.hammergames.featuresandcreatures.world.feature.tree;
 
 import com.hammergames.featuresandcreatures.world.feature.ModConfiguredFeature;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Holder;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.grower.AbstractTreeGrower;
@@ -14,7 +15,7 @@ import java.util.Random;
 public class BloodTreeGrower extends AbstractTreeGrower {
     @Nullable
     @Override
-    protected ConfiguredFeature<?, ?> getConfiguredFeature(Random pRandom, boolean pLargeHive) {
+    protected Holder<? extends ConfiguredFeature<?, ?>> getConfiguredFeature(Random pRandom, boolean pLargeHive) {
         return ModConfiguredFeature.BLOOD_TREE;
     }
 }

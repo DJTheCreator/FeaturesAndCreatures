@@ -1,8 +1,11 @@
 package com.hammergames.featuresandcreatures.item;
 
 import com.hammergames.featuresandcreatures.FeaturesAndCreatures;
+import com.hammergames.featuresandcreatures.entity.ModEntityTypes;
+import com.hammergames.featuresandcreatures.entity.custom.WispEntity;
 import com.hammergames.featuresandcreatures.item.custom.FireSwordItem;
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -42,6 +45,10 @@ public class ModItems {
             new ShovelItem(ModTiers.RUBY, 1.7f, -2.6f, new Item.Properties().tab(ModCreativeModeTab.FEATURESANDCREATURES)));
     public static final RegistryObject<Item> RUBY_HOE = ITEMS.register("ruby_hoe", () ->
             new HoeItem(ModTiers.RUBY, -5, 0.0f, new Item.Properties().tab(ModCreativeModeTab.FEATURESANDCREATURES)));
+
+    //Spawn Eggs
+    public static final RegistryObject<ForgeSpawnEggItem> WISP_SPAWN_EGG = ITEMS.register("wisp_spawn_egg", () ->
+            new ForgeSpawnEggItem(ModEntityTypes.WISP, 0x9c9c9c, 0xdbdbdb, new Item.Properties().tab(ModCreativeModeTab.FEATURESANDCREATURES)));
 
 
 

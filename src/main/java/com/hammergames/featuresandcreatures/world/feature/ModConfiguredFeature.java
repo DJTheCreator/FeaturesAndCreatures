@@ -1,6 +1,7 @@
 package com.hammergames.featuresandcreatures.world.feature;
 
 import com.hammergames.featuresandcreatures.block.ModBlocks;
+import net.minecraft.core.Holder;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
@@ -12,12 +13,12 @@ import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvi
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 
 public class ModConfiguredFeature {
-    public static final ConfiguredFeature<TreeConfiguration, ?> BLOOD_TREE = FeatureUtils.register("blood", Feature.TREE.configured(
+    public static final Holder<? extends ConfiguredFeature<TreeConfiguration, ?>> BLOOD_TREE = FeatureUtils.register("blood", Feature.TREE,
             new TreeConfiguration.TreeConfigurationBuilder(
                     BlockStateProvider.simple(ModBlocks.BLOOD_LOG.get()),
                     new StraightTrunkPlacer(5,6,3),
                     BlockStateProvider.simple(ModBlocks.BLOOD_LEAVES.get()),
                     new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 4),
-                    new TwoLayersFeatureSize(1, 0, 2)).build()));
+                    new TwoLayersFeatureSize(1, 0, 2)).build());
 
 }

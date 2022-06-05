@@ -2,10 +2,12 @@ package com.hammergames.featuresandcreatures;
 
 import com.hammergames.featuresandcreatures.block.ModBlocks;
 import com.hammergames.featuresandcreatures.entity.ModEntityTypes;
+import com.hammergames.featuresandcreatures.entity.client.WispRenderer;
 import com.hammergames.featuresandcreatures.item.ModItems;
 import com.hammergames.featuresandcreatures.util.ModTags;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -22,6 +24,7 @@ import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import software.bernie.geckolib3.GeckoLib;
 
 import java.util.stream.Collectors;
 
@@ -44,6 +47,8 @@ public class FeaturesAndCreatures
 
         ModEntityTypes.register(eventBus);
 
+        GeckoLib.initialize();
+
         eventBus.addListener(this::setup);
         eventBus.addListener((this::clientSetup));
 
@@ -56,6 +61,8 @@ public class FeaturesAndCreatures
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLOOD_LEAVES.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLOOD_SAPLING.get(), RenderType.cutout());
+
+        EntityRenderers.register(ModEntityTypes.WISP.get(), WispRenderer::new);
     }
 
     private void setup(final FMLCommonSetupEvent event)
