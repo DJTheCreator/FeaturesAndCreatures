@@ -1,0 +1,68 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 32,
+				"texture_height": 32,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "Body",
+					"pivot": [1.5, 8.125, 0.8],
+					"cubes": [
+						{"origin": [-2, 3, 0], "size": [7, 7, 7], "uv": [0, 0]},
+						{"origin": [-1, 6, -0.1], "size": [2, 2, 0], "uv": [0, 0]},
+						{"origin": [2, 6, -0.1], "size": [2, 2, 0], "uv": [0, 0]},
+						{"origin": [0, 3, -0.1], "size": [3, 2, 0], "uv": [0, 2]}
+					]
+				},
+				{
+					"name": "Arm1",
+					"parent": "Body",
+					"pivot": [6.51034, 5.1321, 2.3209],
+					"cubes": [
+						{"origin": [0.6575, 4.80317, -2.69759], "size": [5, 2, 2], "pivot": [8.1575, 4.05317, -2.69759], "rotation": [-27.73412, 53.08779, -0.16222], "uv": [7, 1]}
+					]
+				},
+				{
+					"name": "Arm2",
+					"parent": "Body",
+					"pivot": [-2.01527, 5.0566, 2.64655],
+					"cubes": [
+						{"origin": [-4.51527, 4.0566, 1.64655], "size": [5, 2, 2], "pivot": [-2.01527, 5.0566, 2.64655], "rotation": [-176.34771, 46.12822, 176.37356], "uv": [1, 10]}
+					]
+				},
+				{
+					"name": "Head1",
+					"parent": "Body",
+					"pivot": [1.72519, 10.31607, 3.48082],
+					"rotation": [0, -22.5, 0],
+					"cubes": [
+						{"origin": [-0.77481, 9.31607, 0.98082], "size": [5, 2, 5], "pivot": [1.72519, 10.31607, 3.48082], "rotation": [-2.35108, 1.72794, 9.85108], "uv": [3, 6]}
+					]
+				},
+				{
+					"name": "Head2",
+					"parent": "Head1",
+					"pivot": [2.23288, 11.73853, 3.5],
+					"cubes": [
+						{"origin": [0.25, 11, 2], "size": [3, 2, 3], "pivot": [1.25, 10.5, 3.5], "rotation": [0, 0, 20], "uv": [12, 9]}
+					]
+				},
+				{
+					"name": "Head3",
+					"parent": "Head2",
+					"pivot": [2.90763, 11.93731, 3.5],
+					"cubes": [
+						{"origin": [1.25, 10.5, 2.5], "size": [2, 4, 2], "pivot": [1.75, 11.25, 3.5], "rotation": [0, 0, 37.5], "uv": [13, 0]}
+					]
+				}
+			]
+		}
+	]
+}
