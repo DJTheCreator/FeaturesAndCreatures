@@ -15,6 +15,8 @@
   "item.featuresandcreatures.ruby_shovel": "Ruby Shovel",
   "item.featuresandcreatures.ruby_hoe": "Ruby Hoe",
 
+  "item.featuresandcreatures.eyeglass": "Eyeglass",
+
   "block.featuresandcreatures.ruby_ore": "Ruby Ore",
 
   "block.featuresandcreatures.dream_planks": "Dream Planks",
@@ -27,6 +29,7 @@
   "block.featuresandcreatures.flesh_block": "Flesh",
   "block.featuresandcreatures.blood_leaves": "Blood Leaves",
   "block.featuresandcreatures.blood_sapling": "Blood Sapling",
+  "block.featuresandcreatures.blood_brambles": "Blood Brambles",
 
   "entity.featuresandcreatures.wisp": "Wisp",
   "item.featuresandcreatures.wisp_spawn_egg": "Wisp Spawn Egg",

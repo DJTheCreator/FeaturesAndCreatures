@@ -61,6 +61,7 @@ public class FeaturesAndCreatures
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLOOD_LEAVES.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLOOD_SAPLING.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLOOD_BRAMBLES.get(), RenderType.cutout());
 
         EntityRenderers.register(ModEntityTypes.WISP.get(), WispRenderer::new);
     }

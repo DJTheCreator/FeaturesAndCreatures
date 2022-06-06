@@ -29,7 +29,7 @@ public class WispEntity extends Animal implements IAnimatable {
             .add(Attributes.MAX_HEALTH,10.0d)
             .add(Attributes.ATTACK_DAMAGE, 8.0f)
             .add(Attributes.ATTACK_SPEED, 2.0f)
-            .add(Attributes.FLYING_SPEED, 2f).build();
+            .add(Attributes.MOVEMENT_SPEED, 2.0f).build();
     }
 
     protected void registerGoals() {

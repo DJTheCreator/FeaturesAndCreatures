@@ -1,6 +1,7 @@
 package com.hammergames.featuresandcreatures.block;
 
 import com.hammergames.featuresandcreatures.FeaturesAndCreatures;
+import com.hammergames.featuresandcreatures.block.custom.ModHurtCarpetBlock;
 import com.hammergames.featuresandcreatures.block.custom.ModNetherrackSaplingBlock;
 import com.hammergames.featuresandcreatures.block.custom.ModUnflammableRotatedPillarBlock;
 import com.hammergames.featuresandcreatures.item.ModCreativeModeTab;
@@ -50,17 +51,17 @@ public class ModBlocks {
                 @Override
                 public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {return false;}}, ModCreativeModeTab.FEATURESANDCREATURES);
     public static final RegistryObject<Block> FLESH_BLOCK = registerBlock("flesh_block", () ->
-            new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)){
+            new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).sound(SoundType.HONEY_BLOCK)){
                 @Override
                 public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {return false;}}, ModCreativeModeTab.FEATURESANDCREATURES);
     public static final RegistryObject<Block> BLOOD_LEAVES = registerBlock("blood_leaves", () ->
-            new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)) {
+            new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).sound(SoundType.SWEET_BERRY_BUSH)) {
                 @Override
                 public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {return false;}}, ModCreativeModeTab.FEATURESANDCREATURES);
     public static final RegistryObject<Block> BLOOD_SAPLING = registerBlock("blood_sapling", () ->
             new ModNetherrackSaplingBlock(new BloodTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), ModCreativeModeTab.FEATURESANDCREATURES);
-
-
+    public static final RegistryObject<Block> BLOOD_BRAMBLES = registerBlock("blood_brambles", () ->
+            new ModHurtCarpetBlock(BlockBehaviour.Properties.of(Material.STONE).noOcclusion().sound(SoundType.SWEET_BERRY_BUSH)), ModCreativeModeTab.FEATURESANDCREATURES);
 
 
 
