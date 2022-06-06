@@ -62,6 +62,8 @@ public class ModBlocks {
             new ModNetherrackSaplingBlock(new BloodTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), ModCreativeModeTab.FEATURESANDCREATURES);
     public static final RegistryObject<Block> BLOOD_BRAMBLES = registerBlock("blood_brambles", () ->
             new ModHurtCarpetBlock(BlockBehaviour.Properties.of(Material.STONE).noOcclusion().sound(SoundType.SWEET_BERRY_BUSH)), ModCreativeModeTab.FEATURESANDCREATURES);
+    public static final RegistryObject<Block> SPROUTING_FAN = registerBlock("sprouting_fan", () ->
+            new Block(BlockBehaviour.Properties.of(Material.GRASS).noOcclusion().sound(SoundType.SWEET_BERRY_BUSH).instabreak().noCollission()), ModCreativeModeTab.FEATURESANDCREATURES);
 
 
 
