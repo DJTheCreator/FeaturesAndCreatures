@@ -1,0 +1,140 @@
+{
+  "variants": {
+    "pickles=1,waterlogged=false": [
+      {
+        "model": "featuresandcreatures:block/blood_worm"
+      },
+      {
+        "model": "featuresandcreatures:block/blood_worm",
+        "y": 90
+      },
+      {
+        "model": "featuresandcreatures:block/blood_worm",
+        "y": 180
+      },
+      {
+        "model": "featuresandcreatures:block/blood_worm",
+        "y": 270
+      }
+    ],
+    "pickles=1,waterlogged=true": [
+      {
+        "model": "featuresandcreatures:block/blood_worm"
+      },
+      {
+        "model": "featuresandcreatures:block/blood_worm",
+        "y": 90
+      },
+      {
+        "model": "featuresandcreatures:block/blood_worm",
+        "y": 180
+      },
+      {
+        "model": "featuresandcreatures:block/blood_worm",
+        "y": 270
+      }
+    ],
+    "pickles=2,waterlogged=false": [
+      {
+        "model": "featuresandcreatures:block/two_blood_worms"
+      },
+      {
+        "model": "featuresandcreatures:block/two_blood_worms",
+        "y": 90
+      },
+      {
+        "model": "featuresandcreatures:block/two_blood_worms",
+        "y": 180
+      },
+      {
+        "model": "featuresandcreatures:block/two_blood_worms",
+        "y": 270
+      }
+    ],
+    "pickles=2,waterlogged=true": [
+      {
+        "model": "featuresandcreatures:block/two_blood_worms"
+      },
+      {
+        "model": "featuresandcreatures:block/two_blood_worms",
+        "y": 90
+      },
+      {
+        "model": "featuresandcreatures:block/two_blood_worms",
+        "y": 180
+      },
+      {
+        "model": "featuresandcreatures:block/two_blood_worms",
+        "y": 270
+      }
+    ],
+    "pickles=3,waterlogged=false": [
+      {
+        "model": "featuresandcreatures:block/three_blood_worms"
+      },
+      {
+        "model": "featuresandcreatures:block/three_blood_worms",
+        "y": 90
+      },
+      {
+        "model": "featuresandcreatures:block/three_blood_worms",
+        "y": 180
+      },
+      {
+        "model": "featuresandcreatures:block/three_blood_worms",
+        "y": 270
+      }
+    ],
+    "pickles=3,waterlogged=true": [
+      {
+        "model": "featuresandcreatures:block/three_blood_worms"
+      },
+      {
+        "model": "featuresandcreatures:block/three_blood_worms",
+        "y": 90
+      },
+      {
+        "model": "featuresandcreatures:block/three_blood_worms",
+        "y": 180
+      },
+      {
+        "model": "featuresandcreatures:block/three_blood_worms",
+        "y": 270
+      }
+    ],
+    "pickles=4,waterlogged=false": [
+      {
+        "model": "featuresandcreatures:block/four_blood_worms"
+      },
+      {
+        "model": "featuresandcreatures:block/four_blood_worms",
+        "y": 90
+      },
+      {
+        "model": "featuresandcreatures:block/four_blood_worms",
+        "y": 180
+      },
+      {
+        "model": "featuresandcreatures:block/four_blood_worms",
+        "y": 270
+      }
+    ],
+    "pickles=4,waterlogged=true": [
+      {
+        "model": "featuresandcreatures:block/four_blood_worms"
+      },
+      {
+        "model": "featuresandcreatures:block/four_blood_worms",
+        "y": 90
+      },
+      {
+        "model": "featuresandcreatures:block/four_blood_worms",
+        "y": 180
+      },
+      {
+        "model": "featuresandcreatures:block/four_blood_worms",
+        "y": 270
+      }
+    ]
+  }
+}

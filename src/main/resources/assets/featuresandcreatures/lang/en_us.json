@@ -8,6 +8,7 @@
 
   "item.featuresandcreatures.bloodfruit": "Bloodfruit",
   "item.featuresandcreatures.roasted_bloodfruit": "Roasted Bloodfruit",
+  "item.featuresandcreatures.nether_eye": "Nether Eye",
 
   "item.featuresandcreatures.ruby_sword": "Ruby Sword",
   "item.featuresandcreatures.ruby_pickaxe": "Ruby Pickaxe",
@@ -30,7 +31,8 @@
   "block.featuresandcreatures.blood_leaves": "Blood Leaves",
   "block.featuresandcreatures.blood_sapling": "Blood Sapling",
   "block.featuresandcreatures.blood_brambles": "Blood Brambles",
-  "block.featuresandcreatures.sprouting_fan": "Sprouting Fan",
+  "block.featuresandcreatures.eye_fan": "Eye Fan",
+  "block.featuresandcreatures.blood_worm": "Blood Worm",
 
   "entity.featuresandcreatures.wisp": "Wisp",
   "item.featuresandcreatures.wisp_spawn_egg": "Wisp Spawn Egg",

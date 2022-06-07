@@ -7,7 +7,6 @@ import com.hammergames.featuresandcreatures.block.custom.ModUnflammableRotatedPi
 import com.hammergames.featuresandcreatures.item.ModCreativeModeTab;
 import com.hammergames.featuresandcreatures.item.ModItems;
 import com.hammergames.featuresandcreatures.world.feature.tree.BloodTreeGrower;
-import net.minecraft.client.resources.sounds.Sound;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.BlockItem;
@@ -31,7 +30,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> RUBY_ORE = registerBlock("ruby_ore", () ->
             new Block(BlockBehaviour.Properties.of(Material.STONE).strength(3f).requiresCorrectToolForDrops().sound(SoundType.STONE)), ModCreativeModeTab.FEATURESANDCREATURES);
 
-
+    //Dream Dimension
     public static final RegistryObject<Block> DREAM_PLANKS = registerBlock("dream_planks", () ->
             new Block(BlockBehaviour.Properties.of(Material.WOOD).strength(2f).sound(SoundType.WOOD)), ModCreativeModeTab.FEATURESANDCREATURES);
     public static final RegistryObject<Block> DREAM_GRASS_BLOCK = registerBlock("dream_grass_block", () ->
@@ -42,6 +41,7 @@ public class ModBlocks {
             new DoorBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.0f).sound(SoundType.WOOD)), ModCreativeModeTab.FEATURESANDCREATURES);
 
 
+    //Blood Biome
     public static final RegistryObject<Block> BLOOD_LOG = registerBlock("blood_log", () ->
             new ModUnflammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)){
                 @Override
@@ -62,8 +62,10 @@ public class ModBlocks {
             new ModNetherrackSaplingBlock(new BloodTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), ModCreativeModeTab.FEATURESANDCREATURES);
     public static final RegistryObject<Block> BLOOD_BRAMBLES = registerBlock("blood_brambles", () ->
             new ModHurtCarpetBlock(BlockBehaviour.Properties.of(Material.STONE).noOcclusion().sound(SoundType.SWEET_BERRY_BUSH)), ModCreativeModeTab.FEATURESANDCREATURES);
-    public static final RegistryObject<Block> SPROUTING_FAN = registerBlock("sprouting_fan", () ->
-            new Block(BlockBehaviour.Properties.of(Material.GRASS).noOcclusion().sound(SoundType.SWEET_BERRY_BUSH).instabreak().noCollission()), ModCreativeModeTab.FEATURESANDCREATURES);
+    public static final RegistryObject<Block> EYE_FAN = registerBlock("eye_fan", () ->
+            new Block(BlockBehaviour.Properties.copy(Blocks.GRASS).sound(SoundType.SWEET_BERRY_BUSH)), ModCreativeModeTab.FEATURESANDCREATURES);
+    public static final RegistryObject<Block> BLOOD_WORM = registerBlock("blood_worm", () ->
+            new SeaPickleBlock(BlockBehaviour.Properties.copy(Blocks.SEA_PICKLE).sound(SoundType.HONEY_BLOCK)), ModCreativeModeTab.FEATURESANDCREATURES);
 
 
 

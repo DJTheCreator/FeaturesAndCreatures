@@ -46,9 +46,11 @@ public class ModItems {
     public static final RegistryObject<Item> RUBY_HOE = ITEMS.register("ruby_hoe", () ->
             new HoeItem(ModTiers.RUBY, -5, 0.0f, new Item.Properties().tab(ModCreativeModeTab.FEATURESANDCREATURES)));
 
-    //Miscellaneous
+    //Blood Biome
     public static final RegistryObject<Item> EYEGLASS = ITEMS.register("eyeglass", () ->
             new SpyglassItem(new Item.Properties().tab(ModCreativeModeTab.FEATURESANDCREATURES)));
+    public static final RegistryObject<Item> NETHER_EYE = ITEMS.register("nether_eye", () ->
+            new Item(new Item.Properties().tab(ModCreativeModeTab.FEATURESANDCREATURES)));
 
     //Spawn Eggs
     public static final RegistryObject<ForgeSpawnEggItem> WISP_SPAWN_EGG = ITEMS.register("wisp_spawn_egg", () ->
