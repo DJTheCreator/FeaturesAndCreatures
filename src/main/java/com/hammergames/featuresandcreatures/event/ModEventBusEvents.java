@@ -2,6 +2,7 @@ package com.hammergames.featuresandcreatures.event;
 
 import com.hammergames.featuresandcreatures.FeaturesAndCreatures;
 import com.hammergames.featuresandcreatures.entity.ModEntityTypes;
+import com.hammergames.featuresandcreatures.entity.custom.NetherWolfEntity;
 import com.hammergames.featuresandcreatures.entity.custom.WispEntity;
 import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
 import net.minecraftforge.event.RegistryEvent;
@@ -16,6 +17,7 @@ public class ModEventBusEvents {
     @SubscribeEvent
     public static void entityAttributeEvent(EntityAttributeCreationEvent event) {
         event.put(ModEntityTypes.WISP.get(), WispEntity.setAttributes());
+        event.put(ModEntityTypes.NETHER_WOLF.get(), NetherWolfEntity.setAttributes());
     }
 
 }

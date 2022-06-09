@@ -10,4 +10,8 @@ public class ModFoods {
             .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 300, 0), 1f).build();
     public static final FoodProperties ROASTED_BLOODFRUIT = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.1F)
             .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 160, 0), 1f).build();
+    public static final FoodProperties BLOOD_WORM = (new FoodProperties.Builder()).nutrition(7).saturationMod(0F).fast().build();
+    public static final FoodProperties BLOODY_STEW = (new FoodProperties.Builder()).nutrition(7).saturationMod(0.8F)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 1200, 0), 1f)
+            .effect(() -> new MobEffectInstance(MobEffects.CONFUSION, 600, 0), 1f).build();
 }

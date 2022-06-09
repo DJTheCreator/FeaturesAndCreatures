@@ -18,29 +18,28 @@ import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-public class WispEntity extends Animal implements IAnimatable {
+public class NetherWolfEntity extends Animal implements IAnimatable {
     private AnimationFactory factory = new AnimationFactory(this);
 
-    public WispEntity(EntityType<? extends Animal> entityType, Level level) {
+    public NetherWolfEntity(EntityType<? extends Animal> entityType, Level level) {
         super(entityType, level);
     }
 
     public static AttributeSupplier setAttributes() {return Animal.createMobAttributes()
-            .add(Attributes.MAX_HEALTH,10.0d)
-            .add(Attributes.ATTACK_DAMAGE, 8.0f)
+            .add(Attributes.MAX_HEALTH,50.0d)
+            .add(Attributes.ATTACK_DAMAGE, 12.0f)
             .add(Attributes.ATTACK_SPEED, 2.0f)
-            .add(Attributes.MOVEMENT_SPEED, 2.0f).build();
+            .add(Attributes.MOVEMENT_SPEED, 0.5f).build();
     }
 
     protected void registerGoals() {
         this.goalSelector.addGoal(1, new FloatGoal(this));
         //this.goalSelector.addGoal(1, new SitWhenOrderedToGoal(this));
-        this.goalSelector.addGoal(2, new PanicGoal(this, 1.25d));
-        //this.goalSelector.addGoal(3, new FollowOwnerGoal(this, 1.0d, 10.0f, 2.0f,true));
-        this.goalSelector.addGoal(3, new LookAtPlayerGoal(this, Player.class, 8.0f));
-        this.goalSelector.addGoal(4, new WaterAvoidingRandomStrollGoal(this, 1.0d));
-        this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
-        this.targetSelector.addGoal(6, (new HurtByTargetGoal(this)).setAlertOthers());
+        //this.goalSelector.addGoal(2, new FollowOwnerGoal(this, 1.0d, 10.0f, 2.0f,true));
+        this.goalSelector.addGoal(2, new LookAtPlayerGoal(this, Player.class, 8.0f));
+        this.goalSelector.addGoal(3, new WaterAvoidingRandomStrollGoal(this, 1.0d));
+        this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
+        this.targetSelector.addGoal(5, (new HurtByTargetGoal(this)).setAlertOthers());
 
     }
 
@@ -50,10 +49,10 @@ public class WispEntity extends Animal implements IAnimatable {
         return null;
     }
 
-    protected SoundEvent getAmbientSound() {return SoundEvents.CAT_AMBIENT;}
-    protected SoundEvent getHurtSound(DamageSource damageSourceIn) {return SoundEvents.DOLPHIN_HURT;}
-    protected SoundEvent getDeathSound() {return SoundEvents.DOLPHIN_DEATH;}
-    protected float getSoundVolume() {return 0.2f;}
+    protected SoundEvent getAmbientSound() {return SoundEvents.WOLF_AMBIENT;}
+    protected SoundEvent getHurtSound(DamageSource damageSourceIn) {return SoundEvents.WOLF_HURT;}
+    protected SoundEvent getDeathSound() {return SoundEvents.WOLF_DEATH;}
+    protected float getSoundVolume() {return 0.4f;}
 
 
 

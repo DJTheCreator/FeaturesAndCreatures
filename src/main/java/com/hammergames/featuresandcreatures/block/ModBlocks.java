@@ -5,10 +5,12 @@ import com.hammergames.featuresandcreatures.block.custom.ModHurtCarpetBlock;
 import com.hammergames.featuresandcreatures.block.custom.ModNetherrackSaplingBlock;
 import com.hammergames.featuresandcreatures.block.custom.ModUnflammableRotatedPillarBlock;
 import com.hammergames.featuresandcreatures.item.ModCreativeModeTab;
+import com.hammergames.featuresandcreatures.item.ModFoods;
 import com.hammergames.featuresandcreatures.item.ModItems;
 import com.hammergames.featuresandcreatures.world.feature.tree.BloodTreeGrower;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -64,8 +66,8 @@ public class ModBlocks {
             new ModHurtCarpetBlock(BlockBehaviour.Properties.of(Material.STONE).noOcclusion().sound(SoundType.SWEET_BERRY_BUSH)), ModCreativeModeTab.FEATURESANDCREATURES);
     public static final RegistryObject<Block> EYE_FAN = registerBlock("eye_fan", () ->
             new Block(BlockBehaviour.Properties.copy(Blocks.GRASS).sound(SoundType.SWEET_BERRY_BUSH)), ModCreativeModeTab.FEATURESANDCREATURES);
-    public static final RegistryObject<Block> BLOOD_WORM = registerBlock("blood_worm", () ->
-            new SeaPickleBlock(BlockBehaviour.Properties.copy(Blocks.SEA_PICKLE).sound(SoundType.HONEY_BLOCK)), ModCreativeModeTab.FEATURESANDCREATURES);
+    public static final RegistryObject<Block> BLOOD_WORM = registerEdibleBlock("blood_worm", () ->
+            new SeaPickleBlock(BlockBehaviour.Properties.copy(Blocks.SEA_PICKLE).sound(SoundType.HONEY_BLOCK)), ModCreativeModeTab.FEATURESANDCREATURES, ModFoods.BLOOD_WORM);
 
 
 
@@ -81,6 +83,18 @@ public class ModBlocks {
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab)
     {
         return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
+    }
+
+    private static <T extends Block> RegistryObject<T> registerEdibleBlock(String name, Supplier<T> block, CreativeModeTab tab, FoodProperties food)
+    {
+        RegistryObject<T> toReturn = BLOCKS.register(name, block);
+        registerEdibleBlockItem(name, toReturn, tab, food);
+        return toReturn;
+    }
+
+    private static <T extends Block> RegistryObject<Item> registerEdibleBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab, FoodProperties food)
+    {
+        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab).food(food)));
     }
 
     public static void register(IEventBus eventBus) {

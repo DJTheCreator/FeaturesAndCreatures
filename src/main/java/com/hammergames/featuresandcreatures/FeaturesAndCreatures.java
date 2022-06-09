@@ -2,6 +2,7 @@ package com.hammergames.featuresandcreatures;
 
 import com.hammergames.featuresandcreatures.block.ModBlocks;
 import com.hammergames.featuresandcreatures.entity.ModEntityTypes;
+import com.hammergames.featuresandcreatures.entity.client.NetherWolfRenderer;
 import com.hammergames.featuresandcreatures.entity.client.WispRenderer;
 import com.hammergames.featuresandcreatures.item.ModItems;
 import com.hammergames.featuresandcreatures.util.ModTags;
@@ -9,6 +10,7 @@ import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.ItemInHandRenderer;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -65,8 +67,12 @@ public class FeaturesAndCreatures
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLOOD_SAPLING.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLOOD_BRAMBLES.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.EYE_FAN.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLOOD_WORM.get(), RenderType.translucent());
+
 
         EntityRenderers.register(ModEntityTypes.WISP.get(), WispRenderer::new);
+        EntityRenderers.register(ModEntityTypes.NETHER_WOLF.get(), NetherWolfRenderer::new);
+
     }
 
     private void setup(final FMLCommonSetupEvent event)

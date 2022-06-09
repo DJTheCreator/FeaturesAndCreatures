@@ -1,6 +1,7 @@
 package com.hammergames.featuresandcreatures.entity;
 
 import com.hammergames.featuresandcreatures.FeaturesAndCreatures;
+import com.hammergames.featuresandcreatures.entity.custom.NetherWolfEntity;
 import com.hammergames.featuresandcreatures.entity.custom.WispEntity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
@@ -18,6 +19,11 @@ public class ModEntityTypes {
             EntityType.Builder.of(WispEntity::new, MobCategory.CREATURE)
             .sized(0.5f,0.5f)
             .build(new ResourceLocation(FeaturesAndCreatures.MOD_ID, "wisp").toString()));
+    public static final RegistryObject<EntityType<NetherWolfEntity>> NETHER_WOLF = ENTITY_TYPES.register("nether_wolf", () ->
+            EntityType.Builder.of(NetherWolfEntity::new, MobCategory.CREATURE)
+                    .sized(0.6f,0.85f)
+                    .build(new ResourceLocation(FeaturesAndCreatures.MOD_ID, "nether_wolf").toString()));
+
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

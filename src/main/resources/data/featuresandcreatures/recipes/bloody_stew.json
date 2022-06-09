@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " E ",
+    "RFM",
+    " B "
+  ],
+  "key": {
+    "R": {
+      "item": "featuresandcreatures:roasted_bloodfruit"
+    },
+    "F": {
+      "item": "featuresandcreatures:flesh_block"
+    },
+    "E": {
+      "item": "featuresandcreatures:nether_eye"
+    },
+    "M": {
+      "item": "minecraft:magma_cream"
+    },
+    "B": {
+      "item": "minecraft:bowl"
+    }
+  },
+  "result": {
+    "item": "featuresandcreatures:bloody_stew"
+  }
+}

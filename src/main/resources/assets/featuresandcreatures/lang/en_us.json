@@ -8,6 +8,7 @@
 
   "item.featuresandcreatures.bloodfruit": "Bloodfruit",
   "item.featuresandcreatures.roasted_bloodfruit": "Roasted Bloodfruit",
+  "item.featuresandcreatures.bloody_stew": "Bloody Stew",
   "item.featuresandcreatures.nether_eye": "Nether Eye",
 
   "item.featuresandcreatures.ruby_sword": "Ruby Sword",
@@ -36,6 +37,8 @@
 
   "entity.featuresandcreatures.wisp": "Wisp",
   "item.featuresandcreatures.wisp_spawn_egg": "Wisp Spawn Egg",
+  "entity.featuresandcreatures.nether_wolf": "Nether Wolf",
+  "item.featuresandcreatures.nether_wolf_spawn_egg": "Nether Wolf Spawn Egg",
 
 
   "itemGroup.facm": "Features and Creatures"
