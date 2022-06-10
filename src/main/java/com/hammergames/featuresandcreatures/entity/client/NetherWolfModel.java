@@ -9,7 +9,7 @@ public class NetherWolfModel extends AnimatedGeoModel<NetherWolfEntity> {
     @Override
     public ResourceLocation getModelLocation(NetherWolfEntity object) {
 
-        return new ResourceLocation(FeaturesAndCreatures.MOD_ID, "geo/nether_wolf.geo.json");
+        return new ResourceLocation(FeaturesAndCreatures.MOD_ID, "geo/entity/nether_wolf.geo.json");
     }
 
     @Override

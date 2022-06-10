@@ -8,7 +8,7 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 public class WispModel extends AnimatedGeoModel<WispEntity> {
     @Override
     public ResourceLocation getModelLocation(WispEntity object) {
-        return new ResourceLocation(FeaturesAndCreatures.MOD_ID, "geo/wisp.geo.json");
+        return new ResourceLocation(FeaturesAndCreatures.MOD_ID, "geo/entity/wisp.geo.json");
     }
 
     @Override

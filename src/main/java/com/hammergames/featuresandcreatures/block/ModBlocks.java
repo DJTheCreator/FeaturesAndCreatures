@@ -2,7 +2,7 @@ package com.hammergames.featuresandcreatures.block;
 
 import com.hammergames.featuresandcreatures.FeaturesAndCreatures;
 import com.hammergames.featuresandcreatures.block.custom.ModHurtCarpetBlock;
-import com.hammergames.featuresandcreatures.block.custom.ModNetherrackSaplingBlock;
+import com.hammergames.featuresandcreatures.block.custom.ModSaplingBlock;
 import com.hammergames.featuresandcreatures.block.custom.ModUnflammableRotatedPillarBlock;
 import com.hammergames.featuresandcreatures.item.ModCreativeModeTab;
 import com.hammergames.featuresandcreatures.item.ModFoods;
@@ -61,7 +61,7 @@ public class ModBlocks {
                 @Override
                 public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {return false;}}, ModCreativeModeTab.FEATURESANDCREATURES);
     public static final RegistryObject<Block> BLOOD_SAPLING = registerBlock("blood_sapling", () ->
-            new ModNetherrackSaplingBlock(new BloodTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), ModCreativeModeTab.FEATURESANDCREATURES);
+            new ModSaplingBlock(new BloodTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING), () -> Blocks.NETHERRACK), ModCreativeModeTab.FEATURESANDCREATURES);
     public static final RegistryObject<Block> BLOOD_BRAMBLES = registerBlock("blood_brambles", () ->
             new ModHurtCarpetBlock(BlockBehaviour.Properties.of(Material.STONE).noOcclusion().sound(SoundType.SWEET_BERRY_BUSH)), ModCreativeModeTab.FEATURESANDCREATURES);
     public static final RegistryObject<Block> EYE_FAN = registerBlock("eye_fan", () ->

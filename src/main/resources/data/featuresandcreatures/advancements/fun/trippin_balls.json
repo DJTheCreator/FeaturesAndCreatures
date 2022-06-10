@@ -1,0 +1,22 @@
+{
+  "parent": "featuresandcreatures:fun/root",
+  "display": {
+    "icon": {
+      "item": "featuresandcreatures:bloody_stew"
+    },
+    "title": "Trippin' Balls",
+    "description": "And you my precious, are tripping balls.",
+    "frame": "task",
+    "show_toast": true
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:effects_changed",
+      "conditions": {
+        "effects": {
+          "minecraft:nausea": {}
+        }
+      }
+    }
+  }
+}
