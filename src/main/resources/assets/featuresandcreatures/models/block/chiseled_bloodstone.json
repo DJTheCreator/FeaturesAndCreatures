@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "featuresandcreatures:block/chiseled_bloodstone"
+  }
+}

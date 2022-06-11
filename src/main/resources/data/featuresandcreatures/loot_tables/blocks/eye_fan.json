@@ -2,7 +2,7 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "rolls": 1.0,
+      "rolls": 1,
       "bonus_rolls": 0.0,
       "entries": [
         {
@@ -42,10 +42,10 @@
                       "condition": "minecraft:table_bonus",
                       "enchantment": "minecraft:fortune",
                       "chances": [
-                        0.1,
-                        0.14285715,
-                        0.25,
-                        1.0
+                        0.05,
+                        0.0625,
+                        0.0875,
+                        0.1
                       ]
                     }
                   ],

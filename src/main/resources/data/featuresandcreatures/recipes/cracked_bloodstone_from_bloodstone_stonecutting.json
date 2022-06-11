@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "featuresandcreatures:bloodstone"
+  },
+  "result": "featuresandcreatures:cracked_bloodstone_bricks",
+  "count": 1
+}

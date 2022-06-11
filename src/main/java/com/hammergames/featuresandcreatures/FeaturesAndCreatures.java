@@ -69,7 +69,7 @@ public class FeaturesAndCreatures
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.EYE_FAN.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLOOD_EYES.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLOOD_SPROUTS.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLOOD_SPROUTS_TALL.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLOOD_SPROUTS_TALL.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLOOD_WORM.get(), RenderType.translucent());
 
 

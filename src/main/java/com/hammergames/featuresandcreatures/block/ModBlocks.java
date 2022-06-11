@@ -50,32 +50,49 @@ public class ModBlocks {
                 @Override
                 public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {return false;}}, ModCreativeModeTab.FEATURESANDCREATURES);
     public static final RegistryObject<Block> STRIPPED_BLOOD_LOG = registerBlock("stripped_blood_log", () ->
-            new ModUnflammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)){
-                @Override
-                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {return false;}}, ModCreativeModeTab.FEATURESANDCREATURES);
+            new ModUnflammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)), ModCreativeModeTab.FEATURESANDCREATURES);
     public static final RegistryObject<Block> FLESH_BLOCK = registerBlock("flesh_block", () ->
-            new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).sound(SoundType.HONEY_BLOCK)){
-                @Override
-                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {return false;}}, ModCreativeModeTab.FEATURESANDCREATURES);
+            new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).sound(SoundType.HONEY_BLOCK)), ModCreativeModeTab.FEATURESANDCREATURES);
     public static final RegistryObject<Block> BLOOD_LEAVES = registerBlock("blood_leaves", () ->
-            new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).sound(SoundType.SWEET_BERRY_BUSH)) {
+            new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).sound(SoundType.SLIME_BLOCK)) {
                 @Override
                 public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {return false;}}, ModCreativeModeTab.FEATURESANDCREATURES);
     public static final RegistryObject<Block> BLOOD_SAPLING = registerBlock("blood_sapling", () ->
-            new ModSaplingBlock(new BloodTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING), () -> Blocks.NETHERRACK), ModCreativeModeTab.FEATURESANDCREATURES);
+            new ModSaplingBlock(new BloodTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING), () -> Blocks.NETHERRACK){
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {return false;}}, ModCreativeModeTab.FEATURESANDCREATURES);
     public static final RegistryObject<Block> BLOOD_BRAMBLES = registerBlock("blood_brambles", () ->
-            new ModHurtCarpetBlock(BlockBehaviour.Properties.of(Material.MOSS).noOcclusion().sound(SoundType.SWEET_BERRY_BUSH)), ModCreativeModeTab.FEATURESANDCREATURES);
+            new ModHurtCarpetBlock(BlockBehaviour.Properties.of(Material.MOSS).noOcclusion().sound(SoundType.SWEET_BERRY_BUSH)){
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {return false;}}, ModCreativeModeTab.FEATURESANDCREATURES);
     public static final RegistryObject<Block> EYE_FAN = registerBlock("eye_fan", () ->
-            new Block(BlockBehaviour.Properties.copy(Blocks.GRASS).sound(SoundType.SWEET_BERRY_BUSH)), ModCreativeModeTab.FEATURESANDCREATURES);
+            new Block(BlockBehaviour.Properties.copy(Blocks.GRASS).sound(SoundType.SWEET_BERRY_BUSH)){
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {return false;}}, ModCreativeModeTab.FEATURESANDCREATURES);
     public static final RegistryObject<Block> BLOOD_WORM = registerEdibleBlock("blood_worm", () ->
-            new SeaPickleBlock(BlockBehaviour.Properties.copy(Blocks.SEA_PICKLE).sound(SoundType.HONEY_BLOCK)), ModCreativeModeTab.FEATURESANDCREATURES, ModFoods.BLOOD_WORM);
+            new SeaPickleBlock(BlockBehaviour.Properties.copy(Blocks.SEA_PICKLE).sound(SoundType.WOOD)), ModCreativeModeTab.FEATURESANDCREATURES, ModFoods.BLOOD_WORM);
     public static final RegistryObject<Block> BLOOD_EYES = registerBlock("blood_eyes", () ->
-            new TallGrassBlock(BlockBehaviour.Properties.copy(Blocks.GRASS)), ModCreativeModeTab.FEATURESANDCREATURES);
+            new TallGrassBlock(BlockBehaviour.Properties.copy(Blocks.GRASS).sound(SoundType.BONE_BLOCK)){
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {return false;}}, ModCreativeModeTab.FEATURESANDCREATURES);
     public static final RegistryObject<Block> BLOOD_SPROUTS = registerBlock("blood_sprouts", () ->
-            new TallGrassBlock(BlockBehaviour.Properties.copy(Blocks.GRASS)), ModCreativeModeTab.FEATURESANDCREATURES);
+            new TallGrassBlock(BlockBehaviour.Properties.copy(Blocks.GRASS).sound(SoundType.SWEET_BERRY_BUSH)){
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {return false;}}, ModCreativeModeTab.FEATURESANDCREATURES);
     public static final RegistryObject<Block> BLOOD_SPROUTS_TALL = registerBlock("blood_sprouts_tall", () ->
-            new TallGrassBlock(BlockBehaviour.Properties.copy(Blocks.GRASS)), ModCreativeModeTab.FEATURESANDCREATURES);
-
+            new TallGrassBlock(BlockBehaviour.Properties.copy(Blocks.GRASS).sound(SoundType.SWEET_BERRY_BUSH)){
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {return false;}}, ModCreativeModeTab.FEATURESANDCREATURES);
+    public static final RegistryObject<Block> BLOODSTONE = registerBlock("bloodstone", () ->
+            new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)), ModCreativeModeTab.FEATURESANDCREATURES);
+    public static final RegistryObject<Block> BLOODSTONE_BRICKS = registerBlock("bloodstone_bricks", () ->
+            new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS)), ModCreativeModeTab.FEATURESANDCREATURES);
+    public static final RegistryObject<Block> CRACKED_BLOODSTONE_BRICKS = registerBlock("cracked_bloodstone_bricks", () ->
+            new Block(BlockBehaviour.Properties.copy(Blocks.CRACKED_DEEPSLATE_BRICKS)), ModCreativeModeTab.FEATURESANDCREATURES);
+    public static final RegistryObject<Block> CHISELED_BLOODSTONE = registerBlock("chiseled_bloodstone", () ->
+            new Block(BlockBehaviour.Properties.copy(Blocks.CHISELED_DEEPSLATE)), ModCreativeModeTab.FEATURESANDCREATURES);
+    public static final RegistryObject<Block> SMOOTH_BLOODSTONE = registerBlock("smooth_bloodstone", () ->
+            new Block(BlockBehaviour.Properties.copy(Blocks.POLISHED_DEEPSLATE)), ModCreativeModeTab.FEATURESANDCREATURES);
 
 
     //These methods create an item for the blocks automatically

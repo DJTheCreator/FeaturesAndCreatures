@@ -31,7 +31,7 @@ logoFile="examplemod.png" #optional
 # A text field displayed in the mod UI
 credits="Coding - DJTheCreator, Art - Dark_Legend2 and The_Glitch_Lord" #optional
 # A text field displayed in the mod UI
-authors="Love, Cheese and small house plants" #optional
+authors="DJTheCreator, The_Glitch_Lord, Dark_Legend2" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
 Features and Creatures is a big mod that adds lots of mobs, items and other things for you to use in game. Along with those additions it adds tiny changes to the things already in Minecraft currently. There are many bosses that you can battle with. To accompany the bosses and mobs, Features and Creatures adds new biomes to contain them.

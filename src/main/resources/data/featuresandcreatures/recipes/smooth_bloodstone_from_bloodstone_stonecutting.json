@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "featuresandcreatures:bloodstone"
+  },
+  "result": "featuresandcreatures:smooth_bloodstone",
+  "count": 1
+}

@@ -40,6 +40,11 @@
   "block.featuresandcreatures.blood_eyes": "Blood Eyes",
   "block.featuresandcreatures.blood_sprouts": "Blood Sprouts",
   "block.featuresandcreatures.blood_sprouts_tall": "Tall Blood Sprouts",
+  "block.featuresandcreatures.bloodstone": "Bloodstone",
+  "block.featuresandcreatures.smooth_bloodstone": "Smooth Bloodstone",
+  "block.featuresandcreatures.bloodstone_bricks": "Bloodstone Bricks",
+  "block.featuresandcreatures.cracked_bloodstone_bricks": "Cracked Bloodstone",
+  "block.featuresandcreatures.chiseled_bloodstone": "Chiseled Bloodstone",
 
   "entity.featuresandcreatures.wisp": "Wisp",
   "item.featuresandcreatures.wisp_spawn_egg": "Wisp Spawn Egg",
