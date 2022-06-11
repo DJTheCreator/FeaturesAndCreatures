@@ -20,7 +20,7 @@
   "item.featuresandcreatures.ruby_shovel": "Ruby Shovel",
   "item.featuresandcreatures.ruby_hoe": "Ruby Hoe",
 
-  "item.featuresandcreatures.eyeglass": "Eyeglass",
+  "item.featuresandcreatures.eyeglass": "Eyeglass (WIP)",
 
   "block.featuresandcreatures.ruby_ore": "Ruby Ore",
 
@@ -37,6 +37,9 @@
   "block.featuresandcreatures.blood_brambles": "Blood Brambles",
   "block.featuresandcreatures.eye_fan": "Eye Fan",
   "block.featuresandcreatures.blood_worm": "Blood Worm",
+  "block.featuresandcreatures.blood_eyes": "Blood Eyes",
+  "block.featuresandcreatures.blood_sprouts": "Blood Sprouts",
+  "block.featuresandcreatures.blood_sprouts_tall": "Tall Blood Sprouts",
 
   "entity.featuresandcreatures.wisp": "Wisp",
   "item.featuresandcreatures.wisp_spawn_egg": "Wisp Spawn Egg",

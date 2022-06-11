@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "#featuresandcreatures:blood_logs"
+    "#featuresandcreatures:blood_logs",
+    "#featuresandcreatures:stripped_blood_logs"
   ]
 }
