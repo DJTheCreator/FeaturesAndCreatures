@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "featuresandcreatures:block/bloodstone",
+    "top": "featuresandcreatures:block/bloodstone",
+    "side": "featuresandcreatures:block/bloodstone"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "featuresandcreatures:bloodstone_wall",
+    "featuresandcreatures:smooth_bloodstone_wall",
+    "featuresandcreatures:bloodstone_brick_wall"
+  ]
+}

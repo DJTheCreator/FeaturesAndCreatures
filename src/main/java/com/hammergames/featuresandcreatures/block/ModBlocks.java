@@ -83,6 +83,7 @@ public class ModBlocks {
             new TallGrassBlock(BlockBehaviour.Properties.copy(Blocks.GRASS).sound(SoundType.SWEET_BERRY_BUSH)){
                 @Override
                 public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {return false;}}, ModCreativeModeTab.FEATURESANDCREATURES);
+
     public static final RegistryObject<Block> BLOODSTONE = registerBlock("bloodstone", () ->
             new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)), ModCreativeModeTab.FEATURESANDCREATURES);
     public static final RegistryObject<Block> BLOODSTONE_BRICKS = registerBlock("bloodstone_bricks", () ->
@@ -93,6 +94,29 @@ public class ModBlocks {
             new Block(BlockBehaviour.Properties.copy(Blocks.CHISELED_DEEPSLATE)), ModCreativeModeTab.FEATURESANDCREATURES);
     public static final RegistryObject<Block> SMOOTH_BLOODSTONE = registerBlock("smooth_bloodstone", () ->
             new Block(BlockBehaviour.Properties.copy(Blocks.POLISHED_DEEPSLATE)), ModCreativeModeTab.FEATURESANDCREATURES);
+
+    public static final RegistryObject<Block> BLOODSTONE_SLAB = registerBlock("bloodstone_slab", () ->
+            new SlabBlock(BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE_SLAB)), ModCreativeModeTab.FEATURESANDCREATURES);
+    public static final RegistryObject<Block> BLOODSTONE_BRICK_SLAB = registerBlock("bloodstone_brick_slab", () ->
+            new SlabBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICK_SLAB)), ModCreativeModeTab.FEATURESANDCREATURES);
+    public static final RegistryObject<Block> SMOOTH_BLOODSTONE_SLAB = registerBlock("smooth_bloodstone_slab", () ->
+            new SlabBlock(BlockBehaviour.Properties.copy(Blocks.POLISHED_DEEPSLATE_SLAB)), ModCreativeModeTab.FEATURESANDCREATURES);
+
+    public static final RegistryObject<Block> BLOODSTONE_STAIRS = registerBlock("bloodstone_stairs", () ->
+            new StairBlock(() -> ModBlocks.BLOODSTONE.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE_STAIRS)), ModCreativeModeTab.FEATURESANDCREATURES);
+    public static final RegistryObject<Block> BLOODSTONE_BRICK_STAIRS = registerBlock("bloodstone_brick_stairs", () ->
+            new StairBlock(() -> ModBlocks.BLOODSTONE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICK_STAIRS)), ModCreativeModeTab.FEATURESANDCREATURES);
+    public static final RegistryObject<Block> SMOOTH_BLOODSTONE_STAIRS = registerBlock("smooth_bloodstone_stairs", () ->
+            new StairBlock(() -> ModBlocks.SMOOTH_BLOODSTONE.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.POLISHED_DEEPSLATE_STAIRS)), ModCreativeModeTab.FEATURESANDCREATURES);
+
+    public static final RegistryObject<Block> BLOODSTONE_WALL = registerBlock("bloodstone_wall", () ->
+            new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLED_DEEPSLATE_WALL)), ModCreativeModeTab.FEATURESANDCREATURES);
+    public static final RegistryObject<Block> BLOODSTONE_BRICK_WALL= registerBlock("bloodstone_brick_wall", () ->
+            new WallBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICK_WALL)), ModCreativeModeTab.FEATURESANDCREATURES);
+    public static final RegistryObject<Block> SMOOTH_BLOODSTONE_WALL = registerBlock("smooth_bloodstone_wall", () ->
+            new WallBlock(BlockBehaviour.Properties.copy(Blocks.POLISHED_DEEPSLATE_WALL)), ModCreativeModeTab.FEATURESANDCREATURES);
+
+
 
 
     //These methods create an item for the blocks automatically

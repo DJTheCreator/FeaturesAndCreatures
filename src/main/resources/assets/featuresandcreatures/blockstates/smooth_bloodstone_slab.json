@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "featuresandcreatures:block/smooth_bloodstone_slab"
+    },
+    "type=double": {
+      "model": "featuresandcreatures:block/smooth_bloodstone"
+    },
+    "type=top": {
+      "model": "featuresandcreatures:block/smooth_bloodstone_slab_top"
+    }
+  }
+}
