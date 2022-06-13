@@ -1,0 +1,14 @@
+{
+  "type": "featuresandcreatures:gem_cutting",
+  "ingredients": [
+    {
+      "item": "minecraft:paper"
+    },
+    {
+      "item": "featuresandcreatures:amethyst"
+    }
+  ],
+  "output": {
+    "item": "featuresandcreatures:ruby"
+  }
+}

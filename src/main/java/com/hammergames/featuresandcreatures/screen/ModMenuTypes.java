@@ -15,7 +15,7 @@ public class ModMenuTypes {
             DeferredRegister.create(ForgeRegistries.CONTAINERS, FeaturesAndCreatures.MOD_ID);
 
     public static final RegistryObject<MenuType<GemCutterMenu>> GEM_CUTTER_MENU =
-            registerMenuType(GemCutterMenu::new, "cobalt_blaster_menu");
+            registerMenuType(GemCutterMenu::new, "gem_cutter_menu");
 
 
     private static <T extends AbstractContainerMenu> RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory,

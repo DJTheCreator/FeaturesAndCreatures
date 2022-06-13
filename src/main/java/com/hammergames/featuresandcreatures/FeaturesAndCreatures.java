@@ -6,6 +6,7 @@ import com.hammergames.featuresandcreatures.entity.ModEntityTypes;
 import com.hammergames.featuresandcreatures.entity.client.NetherWolfRenderer;
 import com.hammergames.featuresandcreatures.entity.client.WispRenderer;
 import com.hammergames.featuresandcreatures.item.ModItems;
+import com.hammergames.featuresandcreatures.recipe.ModRecipes;
 import com.hammergames.featuresandcreatures.screen.GemCutterScreen;
 import com.hammergames.featuresandcreatures.screen.ModMenuTypes;
 import com.hammergames.featuresandcreatures.util.ModTags;
@@ -48,6 +49,7 @@ public class FeaturesAndCreatures
         ModEntityTypes.register(eventBus);
         ModBlockEntities.register(eventBus);
         ModMenuTypes.register(eventBus);
+        ModRecipes.register(eventBus);
 
         GeckoLib.initialize();
 

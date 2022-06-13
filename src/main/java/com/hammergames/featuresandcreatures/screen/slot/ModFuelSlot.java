@@ -13,10 +13,15 @@ public class ModFuelSlot extends SlotItemHandler {
 
     @Override
     public boolean mayPlace(ItemStack stack) {
-        return ModFuelSlot.isBlazePower(stack);
+        return AbstractFurnaceBlockEntity.isFuel(stack) || ModFuelSlot.isBucket(stack);
     }
 
-    public static boolean isBlazePower(ItemStack stack) {
-        return stack.is(Items.BLAZE_POWDER);
+    @Override
+    public int getMaxStackSize(ItemStack pStack) {
+        return ModFuelSlot.isBucket(pStack) ? 1 : super.getMaxStackSize(pStack);
+    }
+
+    public static boolean isBucket(ItemStack stack) {
+        return stack.is(Items.BUCKET);
     }
 }

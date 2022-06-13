@@ -31,6 +31,14 @@ public class GemCutterScreen extends AbstractContainerScreen<GemCutterMenu> {
         int y = (height - imageHeight) / 2;
 
         this.blit(pPoseStack, x, y, 0, 0, imageWidth, imageHeight);
+
+        if(menu.isCrafting()) {
+            blit(pPoseStack, x + 150, y + 31, 208, 8, menu.getScaledProgress(), 36);
+        }
+
+        if(menu.hasFuel()) {
+            blit(pPoseStack, x + 51, y + 61, 177, 24, menu.getScaledFuelProgress(), 5);
+        }
     }
 
     @Override
