@@ -55,7 +55,7 @@ public class GemCutterMenu extends AbstractContainerMenu {
     public int getScaledProgress() {
         int progress = this.data.get(0);
         int maxProgress = this.data.get(1);
-        int progressArrowSize = 26;
+        int progressArrowSize = 16;
 
         return maxProgress != 0 && progress != 0 ? progress * progressArrowSize / maxProgress : 0;
     }
@@ -63,7 +63,7 @@ public class GemCutterMenu extends AbstractContainerMenu {
     public int getScaledFuelProgress() {
         int fuelProgress = this.data.get(2);
         int maxFuelProgress = this.data.get(3);
-        int fuelProgressSize = 14;
+        int fuelProgressSize = 74;
 
         return maxFuelProgress != 0 ? (int)(((float)fuelProgress / (float)maxFuelProgress) * fuelProgressSize) : 0;
     }

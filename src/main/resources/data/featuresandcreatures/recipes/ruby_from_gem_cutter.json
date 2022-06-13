@@ -2,13 +2,13 @@
   "type": "featuresandcreatures:gem_cutting",
   "ingredients": [
     {
-      "item": "minecraft:paper"
+      "item": "minecraft:golden_pickaxe"
     },
     {
-      "item": "featuresandcreatures:amethyst"
+      "item": "featuresandcreatures:ruby"
     }
   ],
   "output": {
-    "item": "featuresandcreatures:ruby"
+    "item": "featuresandcreatures:ruby_pickaxe"
   }
 }
