@@ -1,6 +1,7 @@
 package com.hammergames.featuresandcreatures.block;
 
 import com.hammergames.featuresandcreatures.FeaturesAndCreatures;
+import com.hammergames.featuresandcreatures.block.custom.GemCutterBlock;
 import com.hammergames.featuresandcreatures.block.custom.ModHurtCarpetBlock;
 import com.hammergames.featuresandcreatures.block.custom.ModSaplingBlock;
 import com.hammergames.featuresandcreatures.block.custom.ModUnflammableRotatedPillarBlock;
@@ -8,7 +9,6 @@ import com.hammergames.featuresandcreatures.item.ModCreativeModeTab;
 import com.hammergames.featuresandcreatures.item.ModFoods;
 import com.hammergames.featuresandcreatures.item.ModItems;
 import com.hammergames.featuresandcreatures.world.feature.tree.BloodTreeGrower;
-import net.minecraft.client.resources.sounds.Sound;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.food.FoodProperties;
@@ -32,6 +32,8 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> RUBY_ORE = registerBlock("ruby_ore", () ->
             new Block(BlockBehaviour.Properties.of(Material.STONE).strength(3f).requiresCorrectToolForDrops().sound(SoundType.STONE)), ModCreativeModeTab.FEATURESANDCREATURES);
+    public static final RegistryObject<Block> GEM_CUTTER = registerBlock("gem_cutter", () ->
+            new GemCutterBlock(BlockBehaviour.Properties.of(Material.WOOD)), ModCreativeModeTab.FEATURESANDCREATURES);
 
     //Dream Dimension
     public static final RegistryObject<Block> DREAM_PLANKS = registerBlock("dream_planks", () ->
@@ -142,6 +144,13 @@ public class ModBlocks {
     private static <T extends Block> RegistryObject<Item> registerEdibleBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab, FoodProperties food)
     {
         return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab).food(food)));
+    }
+
+    private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block, CreativeModeTab tab)
+    {
+        RegistryObject<T> toReturn = BLOCKS.register(name, block);
+        registerBlockItem(name, toReturn, tab);
+        return toReturn;
     }
 
     public static void register(IEventBus eventBus) {

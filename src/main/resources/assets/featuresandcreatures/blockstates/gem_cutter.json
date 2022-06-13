@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "featuresandcreatures:block/gem_cutter"},
+    "facing=east": { "model": "featuresandcreatures:block/gem_cutter", "y": 90},
+    "facing=south": { "model": "featuresandcreatures:block/gem_cutter", "y": 180},
+    "facing=west": { "model": "featuresandcreatures:block/gem_cutter", "y":  270}
+  }
+}

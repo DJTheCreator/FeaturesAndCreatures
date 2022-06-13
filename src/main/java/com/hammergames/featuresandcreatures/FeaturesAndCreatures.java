@@ -1,13 +1,17 @@
 package com.hammergames.featuresandcreatures;
 
 import com.hammergames.featuresandcreatures.block.ModBlocks;
+import com.hammergames.featuresandcreatures.block.entity.ModBlockEntities;
 import com.hammergames.featuresandcreatures.entity.ModEntityTypes;
 import com.hammergames.featuresandcreatures.entity.client.NetherWolfRenderer;
 import com.hammergames.featuresandcreatures.entity.client.WispRenderer;
 import com.hammergames.featuresandcreatures.item.ModItems;
+import com.hammergames.featuresandcreatures.screen.GemCutterScreen;
+import com.hammergames.featuresandcreatures.screen.ModMenuTypes;
 import com.hammergames.featuresandcreatures.util.ModTags;
 import com.hammergames.featuresandcreatures.world.biome.ModRegion;
 import com.hammergames.featuresandcreatures.world.biome.ModSurfaceRuleData;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRenderers;
@@ -42,6 +46,8 @@ public class FeaturesAndCreatures
         ModTags.register();
 
         ModEntityTypes.register(eventBus);
+        ModBlockEntities.register(eventBus);
+        ModMenuTypes.register(eventBus);
 
         GeckoLib.initialize();
 
@@ -69,6 +75,8 @@ public class FeaturesAndCreatures
 
         EntityRenderers.register(ModEntityTypes.WISP.get(), WispRenderer::new);
         EntityRenderers.register(ModEntityTypes.NETHER_WOLF.get(), NetherWolfRenderer::new);
+
+        MenuScreens.register(ModMenuTypes.GEM_CUTTER_MENU.get(), GemCutterScreen::new);
 
     }
 
