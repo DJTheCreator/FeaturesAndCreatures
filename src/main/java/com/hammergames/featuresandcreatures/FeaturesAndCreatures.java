@@ -6,33 +6,25 @@ import com.hammergames.featuresandcreatures.entity.client.NetherWolfRenderer;
 import com.hammergames.featuresandcreatures.entity.client.WispRenderer;
 import com.hammergames.featuresandcreatures.item.ModItems;
 import com.hammergames.featuresandcreatures.util.ModTags;
+import com.hammergames.featuresandcreatures.world.biome.ModRegion;
+import com.hammergames.featuresandcreatures.world.biome.ModSurfaceRuleData;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.ItemInHandRenderer;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRenderers;
-import net.minecraft.client.renderer.entity.ItemRenderer;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.block.Block;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
-import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
-import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import software.bernie.geckolib3.GeckoLib;
+import terrablender.api.Regions;
+import terrablender.api.SurfaceRuleManager;
 
-import java.util.stream.Collectors;
-
-// The value here should match an entry in the META-INF/mods.toml file
 @Mod(FeaturesAndCreatures.MOD_ID)
 public class FeaturesAndCreatures
 {
@@ -54,7 +46,8 @@ public class FeaturesAndCreatures
         GeckoLib.initialize();
 
         eventBus.addListener(this::setup);
-        eventBus.addListener((this::clientSetup));
+        eventBus.addListener(this::clientSetup);
+        eventBus.addListener(this::commonSetup);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -71,11 +64,21 @@ public class FeaturesAndCreatures
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLOOD_SPROUTS.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLOOD_SPROUTS_TALL.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLOOD_WORM.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.GEM_CUTTER.get(), RenderType.cutout());
 
 
         EntityRenderers.register(ModEntityTypes.WISP.get(), WispRenderer::new);
         EntityRenderers.register(ModEntityTypes.NETHER_WOLF.get(), NetherWolfRenderer::new);
 
+    }
+
+    private void commonSetup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(() ->
+        {
+            Regions.register(new ModRegion(new ResourceLocation(MOD_ID, "overworld"), 100));
+
+            SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModSurfaceRuleData.makeRules());
+        });
     }
 
     private void setup(final FMLCommonSetupEvent event)
