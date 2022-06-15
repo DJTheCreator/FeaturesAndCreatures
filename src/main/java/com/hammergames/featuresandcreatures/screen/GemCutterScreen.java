@@ -32,12 +32,30 @@ public class GemCutterScreen extends AbstractContainerScreen<GemCutterMenu> {
 
         this.blit(pPoseStack, x, y, 0, 0, imageWidth, imageHeight);
 
+        //GUI ANIMATIONS
         if(menu.isCrafting()) {
-            blit(pPoseStack, x + 150, y + 31, 208, 8, menu.getScaledProgress(), 16);
+            if(menu.getScaledPaperProgress() <= 56)
+            {
+                blit(pPoseStack, x + 33, y + 31, 176, 35, menu.getScaledPaperProgress(), 14);
+            } else {
+                blit(pPoseStack, x + 33, y + 31, 176, 35, 56, 14);
+                blit(pPoseStack, x + 89, y + 29, 176, 49, menu.getScaledPaperProgress() - 56, 18);
+            }
+            //blit(pPoseStack, x + 89, y + 29, 176, 49, 37, 18);
+
+            blit(pPoseStack, x + 149, y + 30, 207, 7, menu.getScaledProgress(), 16);
+
         }
 
         if(menu.hasFuel()) {
-            blit(pPoseStack, x + 51, y + 61, 177, 24, menu.getScaledFuelProgress(), 5);
+            if(menu.getScaledFuelProgress() <= 74){
+                blit(pPoseStack, x + 50, y + 60, 176, 23, menu.getScaledFuelProgress(), 5);
+            } else {
+                blit(pPoseStack, x + 50, y + 60, 176, 23, 74, 5);
+                blit(pPoseStack, x + 124, y + 59, 176, 28, menu.getScaledFuelProgress() - 74, 6);
+            }
+
+
         }
     }
 

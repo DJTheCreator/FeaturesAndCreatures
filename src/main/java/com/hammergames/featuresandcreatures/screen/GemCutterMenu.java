@@ -2,8 +2,9 @@ package com.hammergames.featuresandcreatures.screen;
 
 import com.hammergames.featuresandcreatures.block.ModBlocks;
 import com.hammergames.featuresandcreatures.block.entity.GemCutterBlockEntity;
-import com.hammergames.featuresandcreatures.screen.slot.ModFuelSlot;
+import com.hammergames.featuresandcreatures.screen.slot.BlazePowderSlot;
 import com.hammergames.featuresandcreatures.screen.slot.ModResultSlot;
+import com.hammergames.featuresandcreatures.screen.slot.SandpaperSlot;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -13,7 +14,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
-import org.jetbrains.annotations.Nullable;
 
 public class GemCutterMenu extends AbstractContainerMenu {
     private final GemCutterBlockEntity blockEntity;
@@ -35,8 +35,8 @@ public class GemCutterMenu extends AbstractContainerMenu {
         addPlayerHotbar(inv);
 
         this.blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
-            this.addSlot(new ModFuelSlot(handler, 0, 34, 54));
-            this.addSlot(new SlotItemHandler(handler, 1, 17, 30));
+            this.addSlot(new BlazePowderSlot(handler, 0, 34, 54));
+            this.addSlot(new SandpaperSlot(handler, 1, 17, 30));
             this.addSlot(new SlotItemHandler(handler, 2, 34, 6));
             this.addSlot(new ModResultSlot(handler, 3, 129, 30));
         });
@@ -60,12 +60,20 @@ public class GemCutterMenu extends AbstractContainerMenu {
         return maxProgress != 0 && progress != 0 ? progress * progressArrowSize / maxProgress : 0;
     }
 
+    public int getScaledPaperProgress() {
+        int progress = this.data.get(0);
+        int maxProgress = this.data.get(1);
+        int progressArrowSize = 56 + 37;
+
+        return maxProgress != 0 && progress != 0 ? progress * progressArrowSize / maxProgress : 0;
+    }
+
     public int getScaledFuelProgress() {
         int fuelProgress = this.data.get(2);
         int maxFuelProgress = this.data.get(3);
-        int fuelProgressSize = 74;
+        int fuelProgressSize = 74 + 23;
 
-        return maxFuelProgress != 0 ? (int)(((float)fuelProgress / (float)maxFuelProgress) * fuelProgressSize) : 0;
+        return maxFuelProgress != 0 && fuelProgress != 0 ? fuelProgress * fuelProgressSize / maxFuelProgress : 0;
     }
 
     // CREDIT GOES TO: diesieben07 | https://github.com/diesieben07/SevenCommons
@@ -128,14 +136,14 @@ public class GemCutterMenu extends AbstractContainerMenu {
     private void addPlayerInventory(Inventory playerInventory) {
         for (int i = 0; i < 3; ++i) {
             for (int l = 0; l < 9; ++l) {
-                this.addSlot(new Slot(playerInventory, l + i * 9 + 9, 8 + l * 18, 86 + i * 18));
+                this.addSlot(new Slot(playerInventory, l + i * 9 + 9, 8 + l * 18, 84 + i * 18));
             }
         }
     }
 
     private void addPlayerHotbar(Inventory playerInventory) {
         for (int i = 0; i < 9; ++i) {
-            this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 144));
+            this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 142));
         }
     }
 }

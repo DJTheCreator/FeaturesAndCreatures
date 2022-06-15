@@ -45,7 +45,7 @@ public class GemCutterBlockEntity extends BlockEntity implements MenuProvider{
 
     protected final ContainerData data;
     private int progress = 0;
-    private int maxProgress = 72;
+    private int maxProgress = 400;
     private int fuelTime = 0;
     private int maxFuelTime = 0;
 
@@ -140,7 +140,7 @@ public class GemCutterBlockEntity extends BlockEntity implements MenuProvider{
     private void consumeFuel() {
         if(!itemHandler.getStackInSlot(0).isEmpty()) {
             this.fuelTime = ForgeHooks.getBurnTime(this.itemHandler.extractItem(0, 1, false),
-                    RecipeType.SMELTING);
+                    RecipeType.SMELTING) + this.maxProgress;
             this.maxFuelTime = this.fuelTime;
         }
     }
@@ -148,6 +148,9 @@ public class GemCutterBlockEntity extends BlockEntity implements MenuProvider{
     public static void tick(Level pLevel, BlockPos pPos, BlockState pState, GemCutterBlockEntity pBlockEntity) {
         if(isConsumingFuel(pBlockEntity)) {
             pBlockEntity.fuelTime--;
+        } else {
+            pBlockEntity.resetProgress();
+            setChanged(pLevel, pPos, pState);
         }
 
         if(hasRecipe(pBlockEntity)) {
@@ -166,6 +169,8 @@ public class GemCutterBlockEntity extends BlockEntity implements MenuProvider{
             pBlockEntity.resetProgress();
             setChanged(pLevel, pPos, pState);
         }
+
+
     }
 
     private static boolean hasFuelInFuelSlot(GemCutterBlockEntity entity) {

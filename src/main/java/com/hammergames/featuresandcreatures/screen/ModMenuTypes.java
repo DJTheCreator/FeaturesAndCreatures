@@ -18,8 +18,7 @@ public class ModMenuTypes {
             registerMenuType(GemCutterMenu::new, "gem_cutter_menu");
 
 
-    private static <T extends AbstractContainerMenu> RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory,
-                                                                                                  String name) {
+    private static <T extends AbstractContainerMenu> RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory, String name) {
         return MENUS.register(name, () -> IForgeMenuType.create(factory));
     }
 
