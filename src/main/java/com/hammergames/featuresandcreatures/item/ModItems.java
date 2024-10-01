@@ -9,6 +9,9 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(FeaturesAndCreatures.MOD_ID);
 
+    public static final DeferredItem<Item> AMETHYST = ITEMS.registerSimpleItem("amethyst");
+    public static final DeferredItem<Item> SAPPHIRE = ITEMS.registerSimpleItem("sapphire");
+    public static final DeferredItem<Item> TOPAZ = ITEMS.registerSimpleItem("topaz");
     public static final DeferredItem<Item> RUBY = ITEMS.registerSimpleItem("ruby");
     public static final DeferredItem<Item> RAW_RUBY =
             ITEMS.registerItem("raw_ruby", Item::new, new Item.Properties());

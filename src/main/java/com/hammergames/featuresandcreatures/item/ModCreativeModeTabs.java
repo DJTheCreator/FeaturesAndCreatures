@@ -26,6 +26,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.RUBY);
                         output.accept(ModItems.RAW_RUBY);
                         output.accept(ModBlocks.RUBY_ORE);
+                        output.accept(ModItems.TOPAZ);
+                        output.accept(ModItems.SAPPHIRE);
+                        output.accept(ModItems.AMETHYST);
                     })
                     .build());
 
