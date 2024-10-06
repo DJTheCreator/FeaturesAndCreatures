@@ -7,6 +7,8 @@
   "item.featuresandcreatures.topaz": "Topaz",
   "item.featuresandcreatures.sapphire": "Sapphire",
   "item.featuresandcreatures.amethyst": "Amethyst",
+  "item.featuresandcreatures.chainsaw": "Chainsaw",
 
-  "block.featuresandcreatures.ruby_ore": "Ruby Ore"
+  "block.featuresandcreatures.ruby_ore": "Ruby Ore",
+  "block.featuresandcreatures.magic_block": "Magic Block"
 }
