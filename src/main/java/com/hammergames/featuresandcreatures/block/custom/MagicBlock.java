@@ -1,6 +1,7 @@
 package com.hammergames.featuresandcreatures.block.custom;
 
 import com.hammergames.featuresandcreatures.item.ModItems;
+import com.hammergames.featuresandcreatures.util.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -38,7 +39,6 @@ public class MagicBlock extends Block {
     }
 
     private boolean isValidItem(ItemStack item) {
-        return item.getItem() == ModItems.RUBY.get()
-                || item.getItem() == Items.COAL;
+        return item.is(ModTags.Items.TRANSFORMABLE_ITEMS);
     }
 }
