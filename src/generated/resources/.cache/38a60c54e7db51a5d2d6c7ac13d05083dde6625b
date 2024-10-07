@@ -1,7 +1,11 @@
-// 1.21	2024-10-06T21:12:36.8527212	Block States: featuresandcreatures
+// 1.21	2024-10-06T23:49:57.2134105	Block States: featuresandcreatures
 96bb6f4c89d40949af674cf771f45370b035cc29 assets/featuresandcreatures/blockstates/magic_block.json
+391c7c90dabf80849b76e34d02aa00a4fe661443 assets/featuresandcreatures/blockstates/ruby_lamp.json
 9e54b07a377b942af9819790fafb3bb7f9345f71 assets/featuresandcreatures/blockstates/ruby_ore.json
+9479f656988079e9acd961a766ddb3d97046b935 assets/featuresandcreatures/models/block/black_opal_lamp_off.json
+57e9305dc0f990c345b25a402bf1ff9aea3b2852 assets/featuresandcreatures/models/block/black_opal_lamp_on.json
 9b72fc1127204acd1aef1805b9c35b3391b00225 assets/featuresandcreatures/models/block/magic_block.json
 128ef73a157998c4eb001b41749454944a00fe01 assets/featuresandcreatures/models/block/ruby_ore.json
 9d2f612765c67bf4730035181ffe4983f2f3effd assets/featuresandcreatures/models/item/magic_block.json
+a7623d37cc123861811d9c213eb5c0eba95819f5 assets/featuresandcreatures/models/item/ruby_lamp.json
 fd5e5a380dff93d85eb13e1aba2921691056822c assets/featuresandcreatures/models/item/ruby_ore.json

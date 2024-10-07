@@ -32,6 +32,7 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModBlocks.RUBY_ORE);
                         output.accept(ModBlocks.MAGIC_BLOCK);
+                        output.accept(ModBlocks.RUBY_LAMP);
                     })
                     .build());
 

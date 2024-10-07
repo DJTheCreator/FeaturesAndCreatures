@@ -2,6 +2,7 @@ package com.hammergames.featuresandcreatures.block;
 
 import com.hammergames.featuresandcreatures.FeaturesAndCreatures;
 import com.hammergames.featuresandcreatures.block.custom.MagicBlock;
+import com.hammergames.featuresandcreatures.block.custom.RubyLampBlock;
 import com.hammergames.featuresandcreatures.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -24,6 +25,9 @@ public class ModBlocks {
             () -> new DropExperienceBlock(UniformInt.of(2, 5),BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.NETHERRACK)));
     public static final DeferredBlock<Block> MAGIC_BLOCK = registerBlock("magic_block",
             () -> new MagicBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.COPPER)));
+    public static final DeferredBlock<Block> RUBY_LAMP = registerBlock("ruby_lamp",
+            () -> new RubyLampBlock(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops().sound(SoundType.GLASS)
+                    .lightLevel(state -> state.getValue(RubyLampBlock.CLICKED) ? 15 : 0)));
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
